@@ -25,12 +25,12 @@ public class Solution {
 
         }
 
-        ss1 = Integer.parseInt(reverse(s1.toString()));
-        ss2 = Integer.parseInt(reverse(s2.toString()));
+        ss1 = Integer.parseInt(s1.toString());
+        ss2 = Integer.parseInt(s2.toString());
 
         String sss = String.valueOf(ss1 + ss2);
 
-        for(int i = 0; i < sss.length(); i++){
+        for(int i = sss.length()-1; i >= 0; i--){
             l3.val = Character.getNumericValue(sss.charAt(i));
             System.out.println("Link" + (i + 1) + " has value ---> " + l3.val);
             l3.next = new ListNode();
@@ -43,12 +43,6 @@ public class Solution {
     }
 
 
-    public static String reverse(String s){
-        if(s.length() == 0)
-            return "";
-        else
-            return  s.charAt(0)+ reverse(s.substring(1));
-    }
 
 
 
